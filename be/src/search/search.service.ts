@@ -10,7 +10,7 @@ export class SearchService {
     private entryRepository: Repository<Entry>,
   ) {}
 
-  async findByName(name: string) {
+  async findByName(name: string): Promise<Entry> {
     const data = await this.entryRepository.findOne({
       where: { name: Like(`%${name}%`) },
       relations: { examples: true },
