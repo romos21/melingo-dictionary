@@ -27,7 +27,7 @@ module.exports = {
     },
     "plugins": [
         "react",
-        "prettier"
+        "prettier",
     ],
     "rules": {
         '@typescript-eslint/no-non-null-assertion': 'off',
@@ -35,5 +35,5 @@ module.exports = {
         '@typescript-eslint/strict-boolean-expressions': 'off',
         '@typescript-eslint/no-misused-promises': 'off',
     },
-    "ignorePatterns": ["assets", ".eslintrc.cjs", "vite.config.ts", "vite-env.d.ts"],
+    "ignorePatterns": ["assets", ".eslintrc.cjs", "vite.config.ts", "vite-env.d.ts", "jest.config.js"],
 }

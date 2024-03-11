@@ -7,6 +7,7 @@ import useSpeechToText from 'react-hook-speech-to-text';
 import MicIcon from '@mui/icons-material/Mic';
 
 interface ITextareaProps {
+  id: string;
   label?: string;
   value: string;
   setValue?: Dispatch<SetStateAction<string>>;
@@ -18,6 +19,7 @@ interface ITextareaProps {
 }
 
 const Textarea: FC<ITextareaProps> = ({
+  id,
   label,
   value,
   setValue,
@@ -62,6 +64,7 @@ const Textarea: FC<ITextareaProps> = ({
 
   return (
     <TextField
+      id={id}
       fullWidth
       multiline
       rows={4}

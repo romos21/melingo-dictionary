@@ -25,7 +25,7 @@ const TranslationCard: FC<ITranslationsListProps> = ({ value }) => {
         Español &#127466;&#127480;
         {isLoading && <LinearProgress sx={{ position: 'absolute', left: 0, right: 0, bottom: -4 }} />}
       </Typography>
-      <Textarea value={data?.translation ?? value} disabled copyMode pronounceMode />
+      <Textarea id="translation-textarea" value={data?.translation ?? value} disabled copyMode pronounceMode />
       <Collapse in={!!(value && data?.examples)} sx={{ mt: 1 }}>
         <Typography variant="h6">{data?.name}</Typography>
         <Divider sx={{ mt: 2, mb: 2 }} />
