@@ -1,0 +1,27 @@
+services:
+  postgresdb:
+    container_name: postgresdb
+    image: postgres
+    restart: always
+    environment:
+        POSTGRES_DB: ${DB_NAME}
+        POSTGRES_USER: ${DB_USERNAME}
+        POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - ${DB_PORT}:${DB_PORT}
+    volumes:
+      - docker-postgresdb:/var/lib/postgresql/data
+  backend:
+    build: be/
+    ports:
+      - ${PORT}:${PORT}
+    depends_on:
+      - postgresdb
+  frontend:
+    build: fe/
+    ports:
+      - ${VITE_PORT}:${VITE_PORT}
+    depends_on:
+      - backend
+volumes:
+  docker-postgresdb:
