@@ -13,6 +13,11 @@ It also provides examples of usage
   <img alt="logo" src="assets/images/view.png">
 </picture>
 
+## Usage
+<picture>
+  <img alt="logo" src="assets/images/usage.gif">
+</picture>
+
 
 ## Tech stack
 <picture>
